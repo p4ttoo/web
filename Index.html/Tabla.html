@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu Desplegable</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+  }
+  nav {
+    background-color: #444;
+    padding: 10px 20px;
+  }
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+  }
+  nav a:hover {
+    background-color: #555;
+  }
+  .contenido {
+    display: none;
+    padding: 20px;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Menú Desplegable</h1>
+</header>
+<nav>
+  <a href="#" class="opcion-menu" data-target="opcion1">Opción 1</a>
+  <a href="#" class="opcion-menu" data-target="opcion2">Opción 2</a>
+  <a href="#" class="opcion-menu" data-target="opcion3">Opción 3</a>
+<a href="#" class="opcion-menu" data-target="opcion4">Opción 4</a>
+<a href="#" class="opcion-menu" data-target="opcion5">Opción 5</a>
+</nav>
+<div class="contenido" id="opcion1">
+  <h2>Vision</h2>
+  <p>En nuestra empresa de coctel de frutas,
+ imaginamos un mundo donde cada bocado es una explosion de frescura y vitalidad</p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo empresa</title>
+</head>
+<body>
+
+<img src="Logo empresa 2.jpg" alt="Logo empresa 2.jpg">
+</div>
+<div class="contenido" id="opcion2">
+  <h2>Mision</h2>
+  <p>Ofrecer productos reconocidos como el destino preferido aquellos
+ que buscan nutrir su cuerpo con la belleza y el sabor de la naturaleza</p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo empresa</title>
+</head>
+<body>
+
+<img src="Logo empresa.jpg" alt="Logo empresa.jpg">
+
+</body>
+</html>
+</div>
+<div class="contenido" id="opcion3">
+  <h2>Estrategias de Planeacion</h2>
+  <p>° Elaboración del planteamiento del producto ya que sería un buen control
+  de los beneficios y así promover un estilo de vida saludable a los clientes.
+ </p>
+<p>
+° Tener un control sobre los productos a ofrecer ya que deben ser frescos
+ y de excelente calidad, debido a los costos que pueden afectar a la producción, 
+de acuerdo con el análisis de cada ganancia de los resultados y obtener
+ una evolución financiera ya que mostrara una información confiable.
+</p>
+<p>
+° Definir cada objetivo de nuestra empresa los cuales deben ser muy específicos,
+ alcanzables y limitados en el tiempo. 
+Incrementar la variedad de los cocteles en un 25% 
+en los próximos 2 meses o incrementar las ventas en un 65% estos 4 meses.
+</p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo empresa</title>
+</head>
+
+<body>
+
+<img src="Logo empresa 3.jpg" alt="Logo empresa 3.jpg">
+</div>
+<div class="contenido" id="opcion4">
+  <h2>Grafica de Gant</h2>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo empresa</title>
+</head>
+
+<body>
+
+<img src="Grafica de Gant.jpg" alt="Grafica de Gant.jpg">
+</div>
+<div class="contenido" id="opcion5">
+  <h2>Organigrama</h2>
+<img src="Organigrama.jpg" alt="Organigrama.jpg">
+<script>
+
+  const opcionesMenu = document.querySelectorAll('.opcion-menu');
+  opcionesMenu.forEach(opcion => {
+    opcion.addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = this.getAttribute('data-target');
+      const contenidoMostrar = document.getElementById(target);
+      document.querySelectorAll('.contenido').forEach(contenido => {
+        contenido.style.display = 'none';
+      });
+      contenidoMostrar.style.display = 'block';
+    });
+  });
+</script>
+</body>
+</html>
